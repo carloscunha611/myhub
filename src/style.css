@@ -11,9 +11,12 @@
   --font: sans-serif;
   --color-font1: #cecece;
   --color-font2: #141414;
-  --color-bgH: #141414;
+  --color-bgH: url('./assets/bg-home.png');
   --color-Primary: #f2ce66;
   --color-secundary: #108944;
+}
+html {
+  background: #141414;
 }
 
 body {
@@ -21,7 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: var(--color-bgH);
+  background: var(--color-bgH) center/cover no-repeat;
   color: var(--color-font1);
   font-family: var(--font);
   overflow-x: hidden;
@@ -80,7 +83,8 @@ header .typeBlog a#userBlog {
   font-size: 1.1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  left: 35%;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -1rem;
   text-align: center;
   text-decoration: none;
@@ -120,6 +124,9 @@ main .infos .postFollow {
   justify-content: space-evenly;
   list-style: none;
   width: 100%;
+
+  background: rgba(20, 20, 20, 0.1);
+  backdrop-filter: blur(0.2rem);
 }
 
 main .infos .postFollow li {
@@ -186,6 +193,8 @@ main .linkHub .linkBox .links {
   height: 6rem;
   gap: 0.5rem;
   overflow: auto;
+  background: rgba(20, 20, 20, 0.1);
+  backdrop-filter: blur(0.2rem);
 }
 
 .links .link {
@@ -203,11 +212,12 @@ main .linkHub .linkBox .links {
   flex-direction: column;
   gap: 0.1rem;
   padding: 0.5rem;
+  text-align: center;
   text-decoration: none;
   color: var(--color-font1);
 }
 .link a img {
-  width: 32px;
+  width: 2rem;
 }
 
 .link a p {
@@ -235,6 +245,14 @@ main .socialHub .links .link a {
   width: 100%;
 }
 
+main .socialHub .links .link a::after {
+  position: absolute;
+  content: '';
+  height: 2rem;
+  width: 2rem;
+  border-bottom: 1px solid #cecece;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -243,7 +261,8 @@ footer {
   height: 6rem;
   padding: 1rem;
   gap: 1rem;
-  background: #000;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(0.2rem);
 }
 
 footer a {
