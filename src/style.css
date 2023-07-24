@@ -15,9 +15,9 @@
   --color-Primary: #f2ce66;
   --color-secundary: #108944;
 }
-html {
+html,
+body {
   min-height: 100vh;
-  background: #141414;
 }
 
 body {
@@ -25,7 +25,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
   background: var(--color-bgH) center/cover no-repeat;
   color: var(--color-font1);
   font-family: var(--font);
@@ -288,8 +287,6 @@ footer a img {
 }
 
 @media (min-width: 768px) {
-  body {
-  }
   header {
     width: 16rem;
     height: 16rem;
