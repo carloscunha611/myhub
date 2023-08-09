@@ -15,6 +15,14 @@
   --color-Primary: #f2ce66;
   --color-secundary: #108944;
 }
+::-webkit-scrollbar {
+  background: #141414;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-secundary);
+}
+
 html,
 body {
   min-height: 100vh;
